@@ -120,7 +120,51 @@ We based our framework on the sophisticated statistical computing environment R,
 \vfill
 
 
+\begin{block}{Workflow}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.9]{dpcR_framework.png}
+\end{center}
+\end{figure}
+
+The central concept of the workflow is dpcr object, an abstract representation of dPCR data regardless of its source. It allows integration results obtained from various systems in one framework.
+
+\end{block}
+\vfill
+
+\begin{block}{Workflow}
+\begin{table}[b]
+{%
+\begin{tabular*}{\columnwidth}{@{}llll@{}}
+\toprule
+Vendor & System & Format & Type
+\\
+\colrule
+Bio-Rad & QX100 \& QX200 & CSV & Summary export
+\\
+Fluidigm & BioMark & CSV & Summary export
+\\
+Formulatrix & Constellation Digital PCR & CSV & Summary export
+\\
+\botrule
+\end{tabular*}%
+} 
+\end{table}
+
+The number of structured export data formats handled by \textit{dpcR} is 
+growing. Numerous data formats can be processed with the functionality provided 
+by the \textbf{R} environment (see \cite{rodiger_r_2015}). 
+
+\end{block}
+\vfill
+
+
 }
+
+
+
+
 \end{minipage}
 \end{beamercolorbox}
 \end{column}
@@ -135,7 +179,7 @@ We based our framework on the sophisticated statistical computing environment R,
 {
 
 
-\begin{block}{Cross-validation results}
+\begin{block}{Graphical User Interface}
 Bla
 
 \end{block}
@@ -146,7 +190,7 @@ Bla
 \begin{block}{Bibliography}
   \tiny{
   \bibliographystyle{apalike}
-
+  \bibliography{dpcr}
   }
   \end{block}
   \vfill
