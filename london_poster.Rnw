@@ -47,7 +47,7 @@
 \setbeamercolor*{itemize subsubitem}{fg=darkred}
 
 \newlength{\columnheight}
-\setlength{\columnheight}{91cm}
+\setlength{\columnheight}{90.5cm}
 \renewcommand{\thetable}{}
 \def\andname{,}
 \authornote{}
@@ -101,7 +101,7 @@ cool_theme <- theme(plot.background=element_rect(fill = "transparent",
 \textsuperscript{3}Faculty of Natural Sciences, Brandenburg University of Technology Cottbus--Senftenberg, Germany}
 }
 }
-\title{\huge A framework for the read-in, analysis, intra/inter assay comparison and report of dPCR experiments}
+\title{\huge dpcReport \\ \Large A framework for the read-in, analysis, intra/inter assay comparison and report of dPCR experiments}
 
 \begin{frame}
 \begin{columns}
@@ -111,7 +111,7 @@ cool_theme <- theme(plot.background=element_rect(fill = "transparent",
 \parbox[t][\columnheight]{\textwidth}
 {
 \begin{block}{Introduction}
-dpcR is versatile open source cross-platform software, which provides functions to process and study dPCR data independent of the hardware. Our software can be used for data analysis and presentation, as a framework for novel technical developments and as reference for statistical methods in dPCR analysis. 
+dpcReport is a GUI tool for dPCR data mining and report generation. It is based on dpcR, a versatile open source cross-platform software, which provides functions to process and study dPCR data independent of the hardware. Our software can be used for data analysis and presentation, as a framework for novel technical developments and as reference for statistical methods in dPCR analysis. 
 
 \medskip
 
@@ -133,28 +133,45 @@ The central concept of the workflow is dpcr object, an abstract representation o
 \end{block}
 \vfill
 
-\begin{block}{Workflow}
-\begin{table}[b]
+\begin{block}{Input data}
+\begin{table}
 {%
-\begin{tabular*}{\columnwidth}{@{}llll@{}}
+\begin{tabular}{cccc}
 \toprule
-Vendor & System & Format & Type
-\\
-\colrule
-Bio-Rad & QX100 \& QX200 & CSV & Summary export
-\\
-Fluidigm & BioMark & CSV & Summary export
-\\
-Formulatrix & Constellation Digital PCR & CSV & Summary export
-\\
-\botrule
-\end{tabular*}%
+Vendor & System \\
+\midrule
+\rowcolor[gray]{0.75}Bio-Rad & QX100 \& QX200  \\
+Fluidigm & BioMark  \\
+\rowcolor[gray]{0.75}Formulatrix & Constellation Digital PCR \\ 
+\bottomrule
+\end{tabular}%
 } 
 \end{table}
 
-The number of structured export data formats handled by \textit{dpcR} is 
-growing. Numerous data formats can be processed with the functionality provided 
-by the \textbf{R} environment (see \cite{rodiger_r_2015}). 
+Results from systems described in the table above may be freely use as the input in the worflow. Moreover, numerous data formats can be processed with the functionality provided by the \textbf{R} environment \cite{rodiger_r_2015}. 
+
+\end{block}
+\vfill
+
+\begin{block}{Data summary}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.8]{summary_chart.png}
+\end{center}
+\end{figure}
+
+The summaries of input data are available both as interactive tables (allowing filtering and selecting specified runs) and also interactive charts (as presented on the figure above, where replicate 2 of experiment 2 is selected).
+
+\end{block}
+\vfill
+
+\begin{block}{Test panel}
+
+Array based dPCR experiments provide information about spatial distribution of 
+partitions. Procedures belonging to spatial statistics verify if the status 
+(positive, negative) of partition depends on its location. To address such 
+questions, we implemented a Complete Spatial Randomness test~\cite{Baddeley_Turner_2005} for dPCR arrays. 
 
 \end{block}
 \vfill
@@ -172,20 +189,100 @@ by the \textbf{R} environment (see \cite{rodiger_r_2015}).
 
 %new column ------------------------------------------------------    
 
-\begin{column}{.51\textwidth}
+\begin{column}{.53\textwidth}
 \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
 \begin{minipage}[T]{.95\textwidth}  
 \parbox[t][\columnheight]{\textwidth}
 {
 
 
-\begin{block}{Graphical User Interface}
-Bla
+\begin{block}{Comparison of dPCR experiments}
+
+dpcReport uses two methods of comparing dPCR experiments, able to simultaneously 
+compare $\lambda$ values of multiple runs. One of them is based on Generalized Linear Models, where we employ a 
+simplistic model reflecting relationships between variables in dPCR results, given by formula:
+
+\begin{equation*}
+\log{Y} = \beta^T X
+\label{GLM_model}
+\end{equation*}
+
+
+where $Y$ are counts of positive partitions, $X$ are experiments names (categorical data) and $\beta$ are coefficients for every run. Based on the model, estimated means of copies per partitions can be calculated from $\hat{\lambda}=\exp{\beta}$ and next pairwise compared using multiple t-tests as described elsewhere~\cite{bretz_2010}. 
+
+\medskip
+
+The second method pairwise compares the $\hat{\lambda}$ from two or more dPCR experiments 
+using the uniformly most powerful (UMP) ratio test~\citep{fay_2010}. We use Benjamini-Hochberg correction for 
+p-values~\citep{benjamini_1995} to control the family-wise 
+error rate. The UMP ratio test has following null-hypothesis:
+
+\begin{equation*}
+H_0: \frac{\lambda_1}{\lambda_2} = 1
+\end{equation*}
+
+where ${\lambda_1}$ and ${\lambda_2}$ are mean numbers of template molecules per partition in two experiments.
+
 
 \end{block}
 \vfill
 
 
+\begin{block}{Graphical User Interface}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.9]{GUI_RKWard_1.png}
+\end{center}
+\end{figure}
+
+The dpcReport may be used as web application, accessible from every modern web~browser or an 
+\textbf{R} IDE/GUI such as \textbf{RKWard}
+\cite{rodiger_rkward_2012} or \textbf{RStudio}. Moreover, it may be downloaded and installed as a standalone application.
+
+\end{block}
+\vfill
+
+
+\begin{block}{Summary}
+The dpcReport is a freeware multi-platform software design to assist researchers in the analysis of dPCR data.
+\end{block}
+\vfill
+
+\begin{block}{Availability}
+
+dpcReport (standalone version for Microsoft Windows \textsuperscript{\textregistered}):
+\url{http://sourceforge.net/projects/dpcreport/}$\begin{array}{l}
+        \begin{figure}[ht]
+        \centering
+        \scalebox{0.4}{
+          \includegraphics{qr_standalone.png}
+        }
+        \end{figure}
+      \end{array}
+
+dpcReport (web server):
+
+\url{http://www.smorfland.uni.wroc.pl/dpcReport}$\begin{array}{l}
+        \begin{figure}[ht]
+        \centering
+        \scalebox{0.4}{
+          \includegraphics{qr_report.png}
+        }
+        \end{figure}
+      \end{array}
+
+dpcR package:
+\url{https://github.com/michbur/dpcR}$\begin{array}{l}
+        \begin{figure}[ht]
+        \centering
+        \scalebox{0.4}{
+          \includegraphics{qr_package.png}
+        }
+        \end{figure}
+      \end{array}
+
+\end{block}
+\vfill
 
 \begin{block}{Bibliography}
   \tiny{
