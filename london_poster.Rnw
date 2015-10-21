@@ -105,17 +105,17 @@ cool_theme <- theme(plot.background=element_rect(fill = "transparent",
 
 \begin{frame}
 \begin{columns}
-\begin{column}{.485\textwidth}
+\begin{column}{.48\textwidth}
 \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
 \begin{minipage}[T]{.95\textwidth}
 \parbox[t][\columnheight]{\textwidth}
 {
 \begin{block}{Introduction}
-dpcReport is a GUI tool for dPCR data mining and report generation. It is based on dpcR, a versatile open source cross-platform software, which provides functions to process and study dPCR data independent of the hardware. Our software can be used for data analysis and presentation, as a framework for novel technical developments and as reference for statistical methods in dPCR analysis. 
+dpcReport is a GUI tool for dPCR data mining and report generation. It is based on dpcR, a versatile open source cross-platform software, which provides functions to process and study dPCR data independent of the hardware. Our software can be used for data analysis and presentation, as a framework for novel technical developments and as a reference for statistical methods in dPCR analysis. 
 
 \medskip
 
-We based our framework on the sophisticated statistical computing environment R, so the most fundamental interface is a command-line. To move the hurdle of learning new software from users to developers, we also designed a stand-alone graphical interface, accessible also as the interactive web application.
+We based our framework on the sophisticated statistical computing environment R, so the most fundamental interface is a command-line. To move the hurdle of learning new software from users to developers, we also designed a stand-alone graphical interface, accessible also as the web application.
 \end{block}
 \vfill
 
@@ -124,11 +124,11 @@ We based our framework on the sophisticated statistical computing environment R,
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.9]{dpcR_framework.png}
+\includegraphics[scale=0.85]{dpcR_framework.png}
 \end{center}
 \end{figure}
 
-The central concept of the workflow is dpcr object, an abstract representation of dPCR data regardless of its source. It allows integration results obtained from various systems in one framework.
+The central concept of the workflow is a dpcr object, an abstract representation of dPCR data regardless of their source. It allows integration of results obtained from various systems in one framework.
 
 \end{block}
 \vfill
@@ -148,20 +148,20 @@ Fluidigm & BioMark  \\
 } 
 \end{table}
 
-Results from systems described in the table above may be freely use as the input in the worflow. Moreover, numerous data formats can be processed with the functionality provided by the \textbf{R} environment \cite{rodiger_r_2015}. 
+Results from systems described in the table above may be directly used as the input in the dpcReport worflow. Moreover, additional data formats can be processed with the functionality provided by the \textbf{R} environment \cite{rodiger_r_2015}. 
 
 \end{block}
 \vfill
 
-\begin{block}{Data summary}
+\begin{block}{Data sumtool for analysismary}
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.8]{summary_chart.png}
+\includegraphics[scale=0.75]{summary_chart.png}
 \end{center}
 \end{figure}
 
-The summaries of input data are available both as interactive tables (allowing filtering and selecting specified runs) and also interactive charts (as presented on the figure above, where replicate 2 of experiment 2 is selected).
+The summaries of input data are available as interactive tables (allowing filtering and selecting specified runs) and interactive charts (as presented on the figure above, where replicate 2 of experiment 2 is selected).
 
 \end{block}
 \vfill
@@ -171,7 +171,11 @@ The summaries of input data are available both as interactive tables (allowing f
 Array based dPCR experiments provide information about spatial distribution of 
 partitions. Procedures belonging to spatial statistics verify if the status 
 (positive, negative) of partition depends on its location. To address such 
-questions, we implemented a Complete Spatial Randomness test~\cite{Baddeley_Turner_2005} for dPCR arrays. 
+questions, we implemented a Complete Spatial Randomness test~\cite{Baddeley_Turner_2005} for dPCR arrays.
+
+\bigskip
+
+This functionality is enhanced with a tool for analysis of manually selected regions of the array.
 
 \end{block}
 \vfill
@@ -189,7 +193,7 @@ questions, we implemented a Complete Spatial Randomness test~\cite{Baddeley_Turn
 
 %new column ------------------------------------------------------    
 
-\begin{column}{.53\textwidth}
+\begin{column}{.52\textwidth}
 \begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
 \begin{minipage}[T]{.95\textwidth}  
 \parbox[t][\columnheight]{\textwidth}
@@ -199,7 +203,7 @@ questions, we implemented a Complete Spatial Randomness test~\cite{Baddeley_Turn
 \begin{block}{Comparison of dPCR experiments}
 
 dpcReport uses two methods of comparing dPCR experiments, able to simultaneously 
-compare $\lambda$ values of multiple runs. One of them is based on Generalized Linear Models, where we employ a 
+compare $\lambda$ values (mean number of template molecules per partition) of multiple runs. One of them is based on Generalized Linear Models, where we employ a 
 simplistic model reflecting relationships between variables in dPCR results, given by formula:
 
 \begin{equation*}
@@ -210,7 +214,7 @@ simplistic model reflecting relationships between variables in dPCR results, giv
 
 where $Y$ are counts of positive partitions, $X$ are experiments names (categorical data) and $\beta$ are coefficients for every run. Based on the model, estimated means of copies per partitions can be calculated from $\hat{\lambda}=\exp{\beta}$ and next pairwise compared using multiple t-tests as described elsewhere~\cite{bretz_2010}. 
 
-\medskip
+\bigskip
 
 The second method pairwise compares the $\hat{\lambda}$ from two or more dPCR experiments 
 using the uniformly most powerful (UMP) ratio test~\citep{fay_2010}. We use Benjamini-Hochberg correction for 
@@ -221,7 +225,7 @@ error rate. The UMP ratio test has following null-hypothesis:
 H_0: \frac{\lambda_1}{\lambda_2} = 1
 \end{equation*}
 
-where ${\lambda_1}$ and ${\lambda_2}$ are mean numbers of template molecules per partition in two experiments.
+where ${\lambda_1}$ and ${\lambda_2}$ are mean numbers of template molecules per partition in two experiments. Additionally, this method computes simultaneous confidence intervals for estimated $\lambda$ values.
 
 
 \end{block}
@@ -235,7 +239,7 @@ where ${\lambda_1}$ and ${\lambda_2}$ are mean numbers of template molecules per
 \end{center}
 \end{figure}
 
-The dpcReport may be used as web application, accessible from every modern web~browser or an 
+The dpcReport may be used as a web application, accessible from every modern web~browser or an 
 \textbf{R} IDE/GUI such as \textbf{RKWard}
 \cite{rodiger_rkward_2012} or \textbf{RStudio}. Moreover, it may be downloaded and installed as a standalone application.
 
@@ -244,7 +248,7 @@ The dpcReport may be used as web application, accessible from every modern web~b
 
 
 \begin{block}{Summary}
-The dpcReport is a freeware multi-platform software design to assist researchers in the analysis of dPCR data.
+The dpcReport is a freeware multi-platform software designed to assist researchers in the analysis of dPCR data.
 \end{block}
 \vfill
 
