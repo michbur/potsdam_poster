@@ -6,4 +6,4 @@ The functionalities of dpcReport include summary statistics alongside with appro
 
 The dpcReport is a Graphical User Interface based on the dpcR package for statistical computing environment R. All functionalities are also accessible through a command-line, which also allows for more sophisticated analysis tailored for expectations of a researcher. To streamline conversion between GUI and R script, the dpcReport automatically generates R code that can be easily customized.  
 
-The dpcR web-server can be accessed under the address http://www.smorfland.uni.wroc.pl/dpcReport. The stand-alone version for the Microsoft Windows platform can be downloaded from http://sourceforge.net/projects/dpcReport/.
+The dpcR web-server can be accessed under the address http://www.smorfland.uni.wroc.pl/dpcReport. The stand-alone version for the Microsoft Windows platform can be downloaded from http://sourceforge.net/projects/dpcreport/.
