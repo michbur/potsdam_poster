@@ -214,7 +214,7 @@ The \textit{dpcReport} may be used as a web application accessible from every mo
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.8]{GUI_RKWard_1.png}
+\includegraphics[scale=0.99]{GUI_RKWard_1.png}
 \end{center}
 \end{figure}
 
@@ -224,22 +224,18 @@ Additionally, \textit{dpcReport} is accessible through \textbf{R} IDE/GUI such a
 \end{block}
 \vfill
 
-\begin{block}{Analysis output}
+\begin{block}{\textit{dpcReport} output}
 The structure of the output is fully modular and will contain only areas of the analysis chosen by the investigator. It is also possible to save only selected charts or tables.
 
 \bigskip
 
-The framework is based on the sophisticated statistical computing environment \textbf{R}. An important 
-option of \textit{dpcReport} is an export of the \textbf{R} source code used for 
-the report generation is provided to the user. This code can be used for 
-recreating the analysis in the \textbf{R} environment or prototyping more 
-complicated workflows.
+The framework is based on the sophisticated statistical computing environment \textbf{R}. An important  option of \textit{dpcReport} is an export of the \textbf{R} source code used for  the report generation is provided to the user. This code can be used for  recreating the analysis in the \textbf{R} environment or prototyping more  complicated workflows.
 \end{block}
 \vfill
 
 
 \begin{block}{Summary}
-The phylosophy of point-of-care testing require frameworks that can be used directly at the site of patient care. The portable and self-contained \textit{dpcReport} fulfills such requirements and might be easily integrate into POCT routines involving dPCR assays.
+The philosophy of point-of-care testing require frameworks that can be used directly at the site of patient care. The portable and self-contained \textit{dpcReport} fulfills such requirements and might be easily integrate into POCT routines involving dPCR assays.
 \end{block}
 \vfill
 
@@ -249,7 +245,7 @@ The phylosophy of point-of-care testing require frameworks that can be used dire
 \url{http://sourceforge.net/projects/dpcreport/}$\begin{array}{l}
         \begin{figure}[ht]
         \centering
-        \scalebox{0.4}{
+        \scalebox{0.45}{
           \includegraphics{qr_standalone.png}
         }
         \end{figure}
@@ -260,7 +256,7 @@ The phylosophy of point-of-care testing require frameworks that can be used dire
 \url{http://www.smorfland.uni.wroc.pl/dpcReport}$\begin{array}{l}
         \begin{figure}[ht]
         \centering
-        \scalebox{0.4}{
+        \scalebox{0.45}{
           \includegraphics{qr_report.png}
         }
         \end{figure}
@@ -270,7 +266,7 @@ dpcR package:
 \url{https://github.com/michbur/dpcR}$\begin{array}{l}
         \begin{figure}[ht]
         \centering
-        \scalebox{0.4}{
+        \scalebox{0.45}{
           \includegraphics{qr_package.png}
         }
         \end{figure}
