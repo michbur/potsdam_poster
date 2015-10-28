@@ -47,7 +47,7 @@
 \setbeamercolor*{itemize subsubitem}{fg=darkred}
 
 \newlength{\columnheight}
-\setlength{\columnheight}{90.5cm}
+\setlength{\columnheight}{96.5cm}
 \renewcommand{\thetable}{}
 \def\andname{,}
 \authornote{}
@@ -116,6 +116,19 @@ Point-of-Care tests brings the medical examination to the patient. The hardware 
 \vfill
 
 
+\begin{block}{Workflow}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.85]{dpcR_framework.png}
+\end{center}
+\end{figure}
+
+The aim of dpcReport is the exhaustive data analysis integrated into a single framework. Even the most basic data pre-processing (as renaming runs) does not require usage of the additional software, because it is already covered by dpcReport.
+
+\end{block}
+\vfill
+
 
 \begin{block}{Input data}
 \begin{table}
@@ -132,7 +145,7 @@ Fluidigm & BioMark  \\
 } 
 \end{table}
 
-Results from systems described in the table above may be directly used as the input in the dpcReport worflow. Moreover, additional data formats can be processed with the functionality provided by the \textbf{R} environment \cite{rodiger_r_2015}. 
+Results from systems described in the table above may be directly used as the input in the dpcReport worflow. Moreover, additional data formats can be processed with the functionality provided by the \textbf{R} environment \cite{rodiger_r_2015}. Broad importing functionalities allow an integration of information from many dPCR systems.
 
 \end{block}
 \vfill
@@ -141,7 +154,7 @@ Results from systems described in the table above may be directly used as the in
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.75]{summary_chart.png}
+\includegraphics[scale=0.8]{summary_chart.png}
 \end{center}
 \end{figure}
 
@@ -150,38 +163,21 @@ The summaries of input data are available as interactive tables (allowing filter
 \end{block}
 \vfill
 
-\begin{block}{Test panel}
+\begin{block}{Statistical analysis}
 
 Array based dPCR experiments provide information about spatial distribution of 
 partitions. Procedures belonging to spatial statistics verify if the status 
 (positive, negative) of partition depends on its location. To address such 
-questions, we implemented a Complete Spatial Randomness test~\cite{Baddeley_Turner_2005} for dPCR arrays.
+questions, we implemented a Complete Spatial Randomness test~\citep{Baddeley_Turner_2005} for dPCR arrays.
 
 \bigskip
-
-This functionality is enhanced with a tool for analysis of manually selected regions of the array.
-
-\end{block}
-\vfill
-
-\begin{block}{Comparison of dPCR experiments}
 
 dpcReport uses two methods of comparing dPCR experiments, able to simultaneously 
-compare $\lambda$ values (mean number of template molecules per partition) of multiple runs. One of them is based on Generalized Linear Models, where we employ a 
-simplistic model reflecting relationships between variables in dPCR results and next pairwise compared using multiple t-tests as described elsewhere~\cite{bretz_2010}. 
-
-\bigskip
-
-The second method pairwise compares the $\hat{\lambda}$ from two or more dPCR experiments 
-using the uniformly most powerful (UMP) ratio test~\citep{fay_2010}. We use Benjamini-Hochberg correction for 
-p-values~\citep{benjamini_1995} to control the family-wise 
-error rate. Additionally, this method computes simultaneous confidence intervals for estimated $\lambda$ values.
+compare $\lambda$ values (mean number of template molecules per partition) of multiple runs. They are based respectively on Generalized Linear Models~\citep{bretz_2010} and on the uniformly most powerful (UMP) ratio test~\citep{fay_2010}.
 
 
 \end{block}
 \vfill
-
-
 
 }
 
