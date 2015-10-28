@@ -219,7 +219,7 @@ The \textit{dpcReport} may be used as a web application accessible from every mo
 \end{figure}
 
 Additionally, \textit{dpcReport} is accessible through \textbf{R} IDE/GUI such as \textbf{RKWard}
-\cite{rodiger_rkward_2012} or \textbf{RStudio}. Moreover, it may be downloaded and installed as a standalone application.
+\cite{rodiger_rkward_2012} or \textbf{RStudio}. Users with less experience with \textbf{R}, may be download and install \textit{dpcReport} as a standalone application.
 
 \end{block}
 \vfill
