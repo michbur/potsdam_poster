@@ -1,6 +1,6 @@
-# dpcReport – POC tests analysis framework  
+# dpcReport -- POC tests analysis framework  
 
-Point-of-Care tests brings the medical examination to the patient. The hardware necessary for such diagnosis should be completed with a suitably portable analysis framework. We introduce dpcReport, a versatile open source cross-platform software for analysis of digital PCR (dPCR) experiments. It might be accessed as web server from any modern personal computer or even smartphone, greatly enhancing its portability.  
+Point-of-Care tests brings the medical examination to the patient. The hardware necessary for such diagnosis should be completed with a suitably portable analysis framework. We introduce dpcReport, a versatile open source cross-platform software for analysis of digital PCR (dPCR) experiments. It might be accessed as a web server from any modern personal computer or even a smartphone, greatly enhancing its portability.  
 
 The functionalities of dpcReport include summary statistics alongside with appropriate charts, novel experiments comparison methods and quality control of input data. To streamline data analysis, the most fundamental elements of input objects can be edited directly in dpcReport, removing the need for additional data management.  
 
