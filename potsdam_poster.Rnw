@@ -111,7 +111,7 @@ cool_theme <- theme(plot.background=element_rect(fill = "transparent",
 \parbox[t][\columnheight]{\textwidth}
 {
 \begin{block}{Introduction}
-Point-of-Care tests brings the medical examination to the patient. The hardware necessary for such diagnosis should be completed with a suitably portable analysis framework. We introduce dpcReport, a versatile open source cross-platform software for analysis of digital PCR (dPCR) experiments. It might be accessed as a web server from any modern personal computer or even a smartphone, greatly enhancing its portability.
+Point-of-Care tests brings the medical examination to the patient. The hardware necessary for such diagnosis should be completed with a suitably portable analysis framework. We introduce \textit{dpcReport}, a versatile open source cross-platform software for analysis of digital PCR (dPCR) experiments. It might be accessed as a web server from any modern personal computer or even a smartphone, greatly enhancing its portability.
 \end{block}
 \vfill
 
@@ -124,7 +124,7 @@ Point-of-Care tests brings the medical examination to the patient. The hardware 
 \end{center}
 \end{figure}
 
-The aim of dpcReport is the exhaustive data analysis integrated into a single framework. Even the most basic data pre-processing (as renaming runs) does not require usage of the additional software, because it is already covered by dpcReport.
+The aim of \textit{dpcReport} is an exhaustive data analysis integrated into a single framework. Even the most basic data pre-processing (as renaming runs) does not require additional software, because it is already covered by \textit{dpcReport}. Such approach is particulary suitable for POC framework, where access to the external software might be limited.
 
 \end{block}
 \vfill
@@ -145,7 +145,7 @@ Fluidigm & BioMark  \\
 } 
 \end{table}
 
-Results from systems described in the table above may be directly used as the input in the dpcReport worflow. Moreover, additional data formats can be processed with the functionality provided by the \textbf{R} environment \cite{rodiger_r_2015}. Broad importing functionalities allow an integration of information from many dPCR systems.
+Results from systems described in the table above may be directly used as the input in the \textit{dpcReport} worflow. Moreover, additional data formats can be processed with the functionality provided by the \textbf{R} environment \cite{rodiger_r_2015}. Broad importing functionalities allow an integration of information from many dPCR systems.
 
 \end{block}
 \vfill
@@ -154,7 +154,7 @@ Results from systems described in the table above may be directly used as the in
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.8]{summary_chart.png}
+\includegraphics[scale=0.78]{summary_chart.png}
 \end{center}
 \end{figure}
 
@@ -172,7 +172,7 @@ questions, we implemented a Complete Spatial Randomness test~\citep{Baddeley_Tur
 
 \bigskip
 
-dpcReport uses two methods of comparing dPCR experiments, able to simultaneously 
+\textit{dpcReport} uses two methods of comparing dPCR experiments, able to simultaneously 
 compare $\lambda$ values (mean number of template molecules per partition) of multiple runs. They are based respectively on Generalized Linear Models~\citep{bretz_2010} and on the uniformly most powerful (UMP) ratio test~\citep{fay_2010}.
 
 
@@ -210,7 +210,7 @@ compare $\lambda$ values (mean number of template molecules per partition) of mu
 
 
 
-The dpcReport may be used as a web application, accessible from every modern web~browser, including web-browsers for portable devices as smartphones or tablets. 
+The \textit{dpcReport} may be used as a web application accessible from every modern web~browser, including web~browsers for portable devices.
 
 \begin{figure}
 \begin{center}
@@ -218,21 +218,34 @@ The dpcReport may be used as a web application, accessible from every modern web
 \end{center}
 \end{figure}
 
-Additionally, dpcReport is accessible through \textbf{R} IDE/GUI such as \textbf{RKWard}
+Additionally, \textit{dpcReport} is accessible through \textbf{R} IDE/GUI such as \textbf{RKWard}
 \cite{rodiger_rkward_2012} or \textbf{RStudio}. Moreover, it may be downloaded and installed as a standalone application.
 
 \end{block}
 \vfill
 
+\begin{block}{Analysis output}
+The structure of the output is fully modular and will contain only areas of the analysis chosen by the investigator. It is also possible to save only selected charts or tables.
+
+\bigskip
+
+The framework is based on the sophisticated statistical computing environment \textbf{R}. An important 
+option of \textit{dpcReport} is an export of the \textbf{R} source code used for 
+the report generation is provided to the user. This code can be used for 
+recreating the analysis in the \textbf{R} environment or prototyping more 
+complicated workflows.
+\end{block}
+\vfill
+
 
 \begin{block}{Summary}
-The dpcReport is a freeware multi-platform software designed to assist researchers in the analysis of dPCR data.
+The phylosophy of point-of-care testing require frameworks that can be used directly at the site of patient care. The portable and self-contained \textit{dpcReport} fulfills such requirements and might be easily integrate into POCT routines involving dPCR assays.
 \end{block}
 \vfill
 
 \begin{block}{Availability}
 
-dpcReport (standalone version for Microsoft Windows \textsuperscript{\textregistered}):
+\textit{dpcReport} (standalone version for Microsoft Windows \textsuperscript{\textregistered}):
 \url{http://sourceforge.net/projects/dpcreport/}$\begin{array}{l}
         \begin{figure}[ht]
         \centering
@@ -242,7 +255,7 @@ dpcReport (standalone version for Microsoft Windows \textsuperscript{\textregist
         \end{figure}
       \end{array}
 
-dpcReport (web server):
+\textit{dpcReport} (web server):
 
 \url{http://www.smorfland.uni.wroc.pl/dpcReport}$\begin{array}{l}
         \begin{figure}[ht]
