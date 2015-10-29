@@ -214,18 +214,18 @@ The \textit{dpcReport} may be used as a web application accessible from every mo
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.99]{GUI_RKWard_1.png}
+\includegraphics[scale=0.95]{GUI_RKWard_1.png}
 \end{center}
 \end{figure}
 
-Additionally, \textit{dpcReport} is accessible through \textbf{R} IDE/GUI such as \textbf{RKWard}
-\cite{rodiger_rkward_2012} or \textbf{RStudio}. Users with less experience with \textbf{R}, may be download and install \textit{dpcReport} as a standalone application.
+Additionally, \textit{dpcReport} may be downloaded and installed \textit{dpcReport} as a standalone application.
+For users with more experiences with \textbf{R}, \textit{dpcReport} is accessible through \textbf{R} IDE/GUI such as \textbf{RKWard}~\citep{rodiger_rkward_2012} or \textbf{RStudio}.
 
 \end{block}
 \vfill
 
 \begin{block}{\textit{dpcReport} output}
-The structure of the output is fully modular and will contain only areas of the analysis chosen by the investigator. It is also possible to save only selected charts or tables.
+The structure of the output is fully modular. A final report created through the framework contains only parts of the analysis chosen by the investigator. It is also possible to save only selected charts or tables instead of creating the report.
 
 \bigskip
 
