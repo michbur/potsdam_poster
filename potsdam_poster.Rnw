@@ -204,7 +204,7 @@ compare $\lambda$ values (mean number of template molecules per partition) of mu
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.99]{mobile_vs_desktop.png}
+\includegraphics[scale=0.95]{mobile_vs_desktop.png}
 \end{center}
 \end{figure}
 
@@ -214,7 +214,7 @@ The \textit{dpcReport} may be used as a web application accessible from every mo
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.95]{GUI_RKWard_1.png}
+\includegraphics[scale=0.90]{GUI_RKWard_1.png}
 \end{center}
 \end{figure}
 
@@ -241,7 +241,7 @@ The philosophy of point-of-care testing require frameworks that can be used dire
 
 \begin{block}{Availability}
 
-\textit{dpcReport} (standalone version for Microsoft Windows \textsuperscript{\textregistered}):
+\textit{dpcReport} (standalone version for Microsoft Windows \textsuperscript{\textregistered}): \linebreak
 \url{http://sourceforge.net/projects/dpcreport/}$\begin{array}{l}
         \begin{figure}[ht]
         \centering
@@ -251,7 +251,7 @@ The philosophy of point-of-care testing require frameworks that can be used dire
         \end{figure}
       \end{array}
 
-\textit{dpcReport} (web server):
+\textit{dpcReport} (web server): \linebreak
 
 \url{http://www.smorfland.uni.wroc.pl/dpcReport}$\begin{array}{l}
         \begin{figure}[ht]
@@ -262,7 +262,7 @@ The philosophy of point-of-care testing require frameworks that can be used dire
         \end{figure}
       \end{array}
 
-dpcR package:
+dpcR package: \linebreak
 \url{https://github.com/michbur/dpcR}$\begin{array}{l}
         \begin{figure}[ht]
         \centering
