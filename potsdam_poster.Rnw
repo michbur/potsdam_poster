@@ -101,7 +101,7 @@ cool_theme <- theme(plot.background=element_rect(fill = "transparent",
 \textsuperscript{3}Faculty of Natural Sciences, Brandenburg University of Technology Cottbus--Senftenberg, Germany}
 }
 }
-\title{\huge dpcReport: POC tests analysis framework}
+\title{\huge dpcReport: Mobile-Health analysis framework}
 
 \begin{frame}
 \begin{columns}
@@ -111,7 +111,7 @@ cool_theme <- theme(plot.background=element_rect(fill = "transparent",
 \parbox[t][\columnheight]{\textwidth}
 {
 \begin{block}{Introduction}
-Point-of-Care tests brings the medical examination to the patient. The hardware necessary for such diagnosis should be completed with a suitably portable analysis framework. We introduce \textit{dpcReport}, a versatile open source cross-platform software for analysis of digital PCR (dPCR) experiments. It might be accessed as a web server from any modern personal computer or even a smartphone, greatly enhancing its portability.
+We introduce \textit{dpcReport}, a versatile open source cross-platform software for analysis of digital PCR (dPCR) experiments. As any other Mobile-Health software, it might be accessed as a web server from a mobile communication device with a modern web browser. In addition to this, the \textit{dpcReport} is also avaible on desktop machines as both web server and standalone software.
 \end{block}
 \vfill
 
@@ -124,7 +124,7 @@ Point-of-Care tests brings the medical examination to the patient. The hardware 
 \end{center}
 \end{figure}
 
-The aim of \textit{dpcReport} is an exhaustive data analysis integrated into a single framework. Even the most basic data pre-processing (as renaming runs) does not require additional software, because it is already covered by \textit{dpcReport}. Such approach is particulary suitable for POC framework, where access to the external software might be limited.
+The aim of \textit{dpcReport} is an exhaustive data analysis integrated into a single framework. Even the most basic data pre-processing (as renaming runs) does not require additional software, because it is already covered by \textit{dpcReport}. Such approach is particulary suitable for Mobile-Health framework, because the access to the external software on mobile devices is limited.
 
 \end{block}
 \vfill
@@ -154,7 +154,7 @@ Results from systems described in the table above may be directly used as the in
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.78]{summary_chart.png}
+\includegraphics[scale=0.75]{summary_chart.png}
 \end{center}
 \end{figure}
 
@@ -235,7 +235,7 @@ The framework is based on the sophisticated statistical computing environment \t
 
 
 \begin{block}{Summary}
-The philosophy of point-of-care testing require frameworks that can be used directly at the site of patient care. The portable and self-contained \textit{dpcReport} fulfills such requirements and might be easily integrate into POCT routines involving dPCR assays.
+The philosophy of Mobile-Health require frameworks that can be effectively used through mobile devices. The portable and self-contained \textit{dpcReport} fulfills such requirements and might be easily integrate into POCT routines involving dPCR assays.
 \end{block}
 \vfill
 
